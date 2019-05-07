@@ -1,0 +1,144 @@
+.form {
+  max-width: 575px;
+  margin: 0 auto;
+
+  @media (max-width: $sm) {
+    max-width: 500px;
+  }
+
+  @media (max-width: $xs) {
+    max-width: 90%;
+  }
+
+  &__element {
+    margin: 48px 0 0;
+
+    @media (max-width: $xs) {
+      margin: 20px 0 0;
+    }
+  }
+
+  &__label {
+    display: block;
+    color: white;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: $din;
+    font-weight: normal;
+    letter-spacing: -0.01em;
+    padding: 20px 0;
+    position: relative;
+
+    @media (max-width: $xs) {
+      padding: 0 0 10px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -94px;
+      width: 64px;
+      height: 44px;
+      border-radius: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.23);
+      font-size: 20px;
+      line-height: 23px;
+      font-family: $rob;
+      font-weight: 500;
+      color: $m-orange;
+      text-align: center;
+      padding-top: 20px;
+
+      @media (max-width: $xs) {
+        display: none;
+      }
+    }
+
+    @for $i from 1 through 4 {
+      &--#{$i} {
+        &:before {
+          content: '#{$i}';
+        }
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0 0 12px;
+    border: 0;
+    border-bottom: 1px solid rgba(247, 248, 250, 0.1);
+    background: transparent;
+    font-size: 24px;
+    line-height: 35px;
+    font-family: $rob;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
+    resize: none;
+
+    @media (max-width: $xs) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    &--error {
+      border-bottom-color: red;
+      color: red;
+    }
+  }
+
+  &__button {
+    background: white;
+    height: 54px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+    border-radius: 111px;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: $button-font;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $m-orange;
+    position: relative;
+    border: 0;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    transition: 0.3s;
+    margin: 60px 0 0;
+
+    @media (max-width: $xs) {
+      margin: 20px 0 0;
+      height: 45px;
+    }
+
+    &:before {
+      content: '';
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      transition: 0.3s;
+      background: $m-orange;
+    }
+
+    &:hover {
+      color: white;
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  &__text-button {
+    position: relative;
+    z-index: 1;
+  }
+}

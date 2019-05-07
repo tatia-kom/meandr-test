@@ -1,0 +1,20 @@
+{
+  "name": "meandr",
+  "version": "1.0.0",
+  "private": true,
+  "description": "test task",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.9.3",
+    "webpack": "^4.20.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tatia-kom/meandr-test.git"
+  },
+  "scripts": {
+    "build": "node-sass --recursive --output ./css/ --source-map true --source-map-contents ./scss",
+    "start": "node-sass --watch --recursive --output ./css/ --source-map true --source-map-contents ./scss"
+  },
+  "author": "tatia.kom"
+}

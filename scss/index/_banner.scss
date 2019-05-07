@@ -1,0 +1,13 @@
+.banner {
+  background: url('../img/banner.png') no-repeat center;
+  background-size: cover;
+  height: 600px;
+
+  @media (max-width: $sm) {
+    height: 400px;
+  }
+
+  @media (max-width: $xs) {
+    height: 300px;
+  }
+}

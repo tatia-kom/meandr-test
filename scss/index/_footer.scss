@@ -1,0 +1,29 @@
+.footer {
+  background: $m-footer;
+  padding: 100px 0 120px;
+  margin: 0;
+
+  @media (max-width: $sm) {
+    padding: 40px 0;
+  }
+
+  @media (max-width: $xs) {
+    padding: 30px 0;
+  }
+
+  &__title {
+    font-size: 40px;
+    line-height: 52px;
+    font-family: $din;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+
+    @media (max-width: $xs) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}

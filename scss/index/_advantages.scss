@@ -1,0 +1,123 @@
+.advantages {
+  padding: 120px 0 160px;
+
+  @media (max-width: $sm) {
+    padding: 40px 0;
+  }
+
+  @media (max-width: $xs) {
+    padding: 30px 0;
+  }
+
+  &__wrap {
+    max-width: 1139px;
+    width: calc(100% - 60px);
+    padding: 0 30px;
+    margin: 0 auto;
+
+    @media (max-width: $xs) {
+      padding: 0 15px;
+      width: calc(100% - 30px);
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    line-height: 50px;
+    font-family: $din;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin: 0;
+
+    @media (max-width: $xs) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $xs) {
+      display: block;
+    }
+  }
+
+  &__item {
+    width: 30%;
+    margin: 60px 0 0;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: transform 0.85s cubic-bezier(0.39, 0.575, 0.565, 1),opacity 0.3s linear,-webkit-transform 0.85s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+    @media (max-width: $xs) {
+      width: 100%;
+      margin: 30px 0 0;
+    }
+
+    &:nth-child(1) {
+      transition-delay: .25s;
+    }
+
+    &:nth-child(2) {
+      transition-delay: .45s;
+    }
+
+    &:nth-child(3) {
+      transition-delay: .65s;
+    }
+
+    &--animated {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    height: 52px;
+
+    @media (max-width: $xs) {
+      display: block;
+      margin: auto;
+    }
+  }
+
+  &__adv {
+    font-size: 20px;
+    line-height: 25px;
+    font-family: $dinB;
+    color: $m-black;
+    margin: 30px 0 25px;
+    position: relative;
+    padding-bottom: 22px;
+
+    @media (max-width: $xs) {
+      text-align: center;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: 0;
+      width: 24px;
+      height: 2px;
+      background: $m-orange;
+
+      @media (max-width: $xs) {
+        left: calc(50% - 12px);
+      }
+    }
+  }
+
+  &__text {
+    color: $m-text;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: $rob;
+    font-weight: 300;
+  }
+}

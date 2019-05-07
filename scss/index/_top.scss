@@ -1,0 +1,102 @@
+.top {
+  padding: 165px 0 126px;
+  background: white;
+
+  @media (max-width: $sm) {
+    padding: 100px 0;
+  }
+
+  @media (max-width: $xs) {
+    padding: 30px 0;
+  }
+
+  &__title {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 48px;
+    line-height: 54px;
+    font-family: $din;
+    font-weight: normal;
+    letter-spacing: -0.02em;
+    color: $m-title;
+
+    @media (max-width: $xs) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: $rob;
+    font-weight: 300;
+    margin: 20px 0 0;
+
+    @media (max-width: $xs) {
+      font-size: 14px;
+      margin: 10px 15px;
+    }
+  }
+
+  &__link {
+    color: $m-orange;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  &__button {
+    margin: 30px auto 0;
+    display: block;
+    background: none;
+    border: 0;
+    outline: none;
+    height: 54px;
+    padding: 0 30px 0 46px;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 54px;
+      background: $m-but;
+      opacity: 0.05;
+      border-radius: 111px;
+      z-index: 0;
+      transition: 0.3s;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 7px);
+      left: 20px;
+      width: 14px;
+      height: 14px;
+      display: block;
+      background: url('../img/button_plus.svg') no-repeat;
+    }
+
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+
+  &__click {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: $button-font;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    z-index: 1;
+    position: relative;
+  }
+}

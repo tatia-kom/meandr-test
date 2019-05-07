@@ -1,0 +1,20 @@
+@import "base/fonts";
+@import "base/var";
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $m-grey;
+}
+
+@import "index/top";
+@import "index/banner";
+@import "index/similarities";
+@import "index/text-block";
+@import "index/advantages";
+@import "index/footer";
+@import "index/form";
+
+
+
+
